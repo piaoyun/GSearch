@@ -6,6 +6,7 @@ $qv = urldecode($q);
 $start = isset($_GET['start']) ? $_GET['start'] : 0;
 $search = $resultStats = '';
 if ($q) {
+    //如果在国内就把ajax.googleapis.com替换成ajax.lug.ustc.edu.cn
     $url = 'https://ajax.googleapis.com/ajax/services/search/web?v=1.0&rsz=8&q=';
     $ch = curl_init();
     $timeout = 5;
