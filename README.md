@@ -7,4 +7,4 @@ GSearch利用Google搜索的API做的搜索程序，可搜索敏感词，支持�
 4.有空会再继续优化
 
 # 版权说明
-程序是在 https://github.com/xing393939/php_google_agent 的基础上修改过来，不过原程序做的太粗糙了，又不能搜索敏感词
+程序是在 https://github.com/xing393939/php_google_agent 的基础上修改过来，不过原程序做的太粗糙了，又不能搜索敏感词，又要国外空间。
