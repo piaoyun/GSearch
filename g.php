@@ -1,13 +1,17 @@
 <?php
 error_reporting(0);
+$inchina='0';//如果php服务器ip在国内，请把这个参数的0修改成1
 $q = isset($_GET['q']) ? str_replace('@','%',strrev($_GET['q'])) : '';
 //$q = isset($_GET['q']) ? urlencode($_GET['q']) : '';
 $qv = urldecode($q);
 $start = isset($_GET['start']) ? $_GET['start'] : 0;
 $search = $resultStats = '';
 if ($q) {
-    //如果在国内就把ajax.googleapis.com替换成ajax.lug.ustc.edu.cn
-    $url = 'https://ajax.googleapis.com/ajax/services/search/web?v=1.0&rsz=8&q=';
+    if (inchina != '0') {
+		$url = 'https://ajax.googleapis.com/ajax/services/search/web?v=1.0&rsz=8&q=';
+	} else {
+		$url = 'https://ajax.lug.ustc.edu.cn/ajax/services/search/web?v=1.0&rsz=8&q=';
+	}
     $ch = curl_init();
     $timeout = 5;
     curl_setopt($ch, CURLOPT_URL, $url . $q . '&start=' . $start);
