@@ -1,2 +1,10 @@
 # GSearch
-GSearch利用Google搜索的API做的搜索程序，可搜索敏感词，支持国内国外的服务器，只有一个php文件。（如果php所在服务器在国内就把 https://ajax.googleapis.com 替换成 https://ajax.lug.ustc.edu.cn ）
+GSearch利用Google搜索的API做的搜索程序，可搜索敏感词，支持国内国外的服务器，只有一个php文件。
+# 主要特点
+1.支持国内国外php服务器
+2.对查询字符串进行简单加密(理论上不太会触发敏感词，但是http毕竟是明文传输，只能保证不会因为敏感词问题被阻断，但是要想完全加密，请用https。)
+3.只有一个文件
+4.有空会再继续优化
+
+# 版权说明
+程序是在 https://github.com/xing393939/php_google_agent 的基础上修改过来，不过原程序做的太粗糙了，又不能搜索敏感词
